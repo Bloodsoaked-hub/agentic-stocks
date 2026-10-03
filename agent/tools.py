@@ -4,6 +4,7 @@ from langchain_core.tools import tool
 
 @tool
 def get_stock_data(ticker: str) -> dict:
+    """Get current stock price and market cap for a given ticker symbol using yfinance."""
     try:
         stock = yf.Ticker(ticker)
         info = stock.info
