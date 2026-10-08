@@ -4,9 +4,9 @@ from agent.state import AgentState
 from agent.tools import get_stock_data
 
 llm = ChatAnthropic(
-    model="claude-haiku-4-5-20251001", 
+    model="claude-haiku-4-5-20251001",
     temperature=0,
-    api_key=os.getenv("ANTHROPIC_API_KEY")    
+    api_key=os.getenv("ANTHROPIC_API_KEY"),
 )
 
 tools = [get_stock_data]
